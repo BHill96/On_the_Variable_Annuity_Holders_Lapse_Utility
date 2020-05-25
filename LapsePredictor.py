@@ -107,7 +107,7 @@ def lapseBoundaryFinder(mortFunc, x, m, b, T, deltaT, alpha, rho, S0, mu, sigma,
     diff = []
     for S2 in linspace(L,U,gridSize):
       S2val.append(S2)
-      phi = findBestPhi(mortFunc, x, m, b, T, deltaT, alpha, rho, S2, mu, sigma)
+      phi = findBestPhi(mortFunc, x, m, b, T, deltaT, alpha, rho, S2, mu, sigma, q)
       diff.append(L2(mortFunc, x, m, b, T, deltaT, alpha, S2, mu, sigma, rho, q, phi)
                    - R2(mortFunc, x, m, b, T, deltaT, alpha, mu, sigma, rho, S0, q))
     # Create Graph
