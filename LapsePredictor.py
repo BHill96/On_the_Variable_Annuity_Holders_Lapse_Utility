@@ -99,7 +99,7 @@ def lapseBoundaryFinder(mortFunc, x, m, b, T, deltaT, alpha, rho, S0, mu, sigma,
     tol = 1
     L = 100000
     U = 300000
-    intersection, L, U = SecantMethod(L, U, tol)
+    intersection, L, U = SecantMethod(L, U, tol, mortFunc, x, m, b, T, deltaT, alpha, rho, S0, mu, sigma, q)
     # Plot graph
     # We use the interval from the Secant Method to ensure the intersection is in the bounds of the graph
     gridSize = 10 # step between lower bound and upper bound
